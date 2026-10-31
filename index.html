@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALI AZHAAN | DIGITAL WORLD</title>
+<style>
+:root{--bg:#080d1b;--panel:#111b30;--text:#f4f7ff;--muted:#aab7d0;--blue:#55c7ff;--purple:#a78bfa}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+header{position:sticky;top:0;background:#080d1beF;backdrop-filter:blur(12px);padding:18px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #26334d;z-index:5}
+.logo{font-size:20px;font-weight:900;color:var(--blue)}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+nav a:hover{color:var(--blue)}
+section{padding:75px 8%;scroll-margin-top:65px}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(ellipse at top,#17365b 0%,#080d1b 65%)}
+.tag{color:var(--blue);letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(40px,8vw,76px);margin:18px 0}
+.gradient{background:linear-gradient(90deg,var(--blue),var(--purple));background-clip:text;color:transparent}
+p{color:var(--muted);line-height:1.8}
+.hero p{max-width:650px}
+.btn{display:inline-block;padding:13px 22px;border-radius:30px;background:linear-gradient(90deg,#258bdc,#8058d9);color:white;text-decoration:none;margin:8px;border:0;cursor:pointer}
+h2{font-size:32px;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:var(--panel);padding:25px;border:1px solid #263652;border-radius:18px}
+.card h3{color:var(--blue)}
+.icon{font-size:30px}
+input,textarea{width:100%;padding:13px;margin:8px 0;background:#080f20;color:white;border:1px solid #34435e;border-radius:9px}
+footer{text-align:center;padding:30px;border-top:1px solid #26334d;color:var(--muted)}
+#reply{white-space:pre-wrap;color:var(--blue);min-height:30px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">ALI AZHAAN.</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#ai">AI Lab</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="tag">WELCOME TO MY DIGITAL UNIVERSE</div>
+<h1>ALI AZHAAN<br><span class="gradient">DIGITAL WORLD</span></h1>
+<p>Exploring technology, artificial intelligence, robotics, coding and innovation. Ideas today, inventions tomorrow.</p>
+<div>
+<a class="btn" href="#projects">Explore My Projects</a>
+<a class="btn" href="#about">Discover More</a>
+</div>
+</section>
+
+<section id="about">
+<div class="tag">GET TO KNOW ME</div>
+<h2>About <span class="gradient">Me</span></h2>
+<div class="card">
+<p>Welcome to my digital world! I am a student who loves exploring the exciting world of technology and innovation. I enjoy learning about artificial intelligence, robotics, computers and creative problem-solving.</p>
+<p>This website is my digital portfolio where I can showcase my ideas, learning journey and projects.</p>
+</div>
+</section>
+
+<section id="projects">
+<div class="tag">MY CREATIONS</div>
+<h2>Featured <span class="gradient">Projects</span></h2>
+<div class="grid">
+<div class="card"><div class="icon">🤖</div><h3>JARVIS AI</h3><p>An AI assistant project exploring smart digital assistance and useful tools.</p></div>
+<div class="card"><div class="icon">🚀</div><h3>PROJECT RAKSHAK</h3><p>A student innovation concept exploring a disaster-response rescue rover.</p></div>
+<div class="card"><div class="icon">💻</div><h3>Web Development</h3><p>Learning to build modern websites and digital experiences.</p></div>
+<div class="card"><div class="icon">⚙️</div><h3>Robotics</h3><p>Exploring robotics, electronics and creative engineering ideas.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="tag">WHAT I EXPLORE</div>
+<h2>My <span class="gradient">Interests</span></h2>
+<div class="grid">
+<div class="card"><div class="icon">🧠</div><h3>Artificial Intelligence</h3><p>Learning about AI and responsible innovation.</p></div>
+<div class="card"><div class="icon">🌐</div><h3>Web Development</h3><p>Creating websites and digital experiences.</p></div>
+<div class="card"><div class="icon">🔧</div><h3>Robotics</h3><p>Discovering how machines and electronics work.</p></div>
+<div class="card"><div class="icon">💡</div><h3>Innovation</h3><p>Turning creative ideas into useful projects.</p></div>
+</div>
+</section>
+
+<section id="ai">
+<div class="tag">EXPERIMENTAL AI CORNER</div>
+<h2>Mini <span class="gradient">AI Lab</span></h2>
+<div class="card">
+<p>Try this simple offline demo assistant. It is not connected to an online AI service.</p>
+<input id="question" placeholder="Ask something, e.g. What is AI?">
+<button class="btn" onclick="askAI()">Ask Assistant</button>
+<p id="reply"></p>
+</div>
+</section>
+
+<section id="contact">
+<div class="tag">SAY HELLO</div>
+<h2>Contact <span class="gradient">Section</span></h2>
+<div class="card">
+<p>Thank you for visiting my digital world! For project-related enquiries, please use a parent-approved contact method.</p>
+<a class="btn" href="#home">Back to Top ↑</a>
+</div>
+</section>
+
+<footer>
+<p>© 2026 ALI AZHAAN – DIGITAL WORLD</p>
+<p>Created with curiosity, creativity and technology.</p>
+</footer>
+
+<script>
+function askAI(){
+const q=document.getElementById('question').value.toLowerCase().trim();
+let answer="I am a simple demo assistant. Try asking: What is AI, what is robotics, or who are you?";
+if(!q){answer="Please type a question first."}
+else if(q.includes("hello")||q.includes("hi"))answer="Hello! Welcome to Ali Azhaan Digital World!";
+else if(q.includes("who are you"))answer="I am the mini demo assistant of Ali Azhaan Digital World.";
+else if(q.includes("ai"))answer="Artificial Intelligence is technology that helps computers perform tasks that usually need human intelligence.";
+else if(q.includes("robot"))answer="Robotics is the field of designing, building and programming robots.";
+else if(q.includes("project"))answer="Explore the Projects section to learn about JARVIS AI, PROJECT RAKSHAK and more.";
+document.getElementById('reply').textContent=answer;
+}
+</script>
+</body>
+</html>
